@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './WeatherApp.css';
-import { apiKey } from './API_KEY';
+const apiKey = process.env.REACT_APP_API_KEY;
 
 function WeatherApp() {
     const [city, setCity] = useState(localStorage.getItem('lastCitySearched') || ''); // Load last searched city from local storage
